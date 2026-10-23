@@ -1,6 +1,10 @@
 // Simulated DOM unit tests. These do not establish browser UX/accessibility.
 import test from 'node:test';import assert from 'node:assert/strict';import vm from 'node:vm';import fs from 'node:fs';import * as core from '../dist/core.mjs';
-const code=fs.readFileSync(new URL('../dist/app.mjs',import.meta.url),'utf8').replace(/^import .*\n/,'');
+const stripImport=source=>source.replace(/^import [^\r\n]*\r?\n/,'');
+test('mock harness removes module import with LF or CRLF',()=>{
+ for(const newline of ['\n','\r\n'])assert.equal(stripImport(`import x from './x.mjs';${newline}const a=1;`),'const a=1;');
+});
+const code=stripImport(fs.readFileSync(new URL('../dist/app.mjs',import.meta.url),'utf8'));
 function harness(){
  class Element{constructor(){this.children=[];this.value='';this.disabled=false;this.textContent='';}append(...x){this.children.push(...x);}replaceChildren(...x){this.children=x;}setAttribute(){}close(){this.open=false;}showModal(){this.open=true;}focus(){}scrollIntoView(){}querySelector(){return this.button??=new Element();}}
  const els=new Map();const document={getElementById:id=>{if(!els.has(id))els.set(id,new Element());return els.get(id);},createElement:()=>new Element(),createTextNode:text=>({textContent:text})};

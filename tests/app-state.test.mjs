@@ -30,6 +30,27 @@ test('query edits invalidate old results and stop in-flight semantic work',()=>{
 test('collection changes remove stale source dialog content',()=>{
  const h=harness();h.run("$('source').showModal(); $('source-text').append('old-document'); changed()");assert.equal(h.els.get('source').open,false);assert.equal(h.els.get('source-text').children.length,0);
 });
+test('semantic results distinguish highest-ranked passage from collapsed unverified suggestions',()=>{
+ const h=harness();h.els.get('demo').onclick();
+ h.run("renderResults(shelf.chunks.map((c,i)=>({...c,score:1-i*.2})), 'semantic')");
+ const children=h.els.get('results').children;
+ assert.equal(children[0].className,'ranking-note');
+ assert.match(children[0].textContent,/not a verified answer/i);
+ assert.equal(children[1].className,'result-card');
+ assert.equal(children[2].className,'other-suggestions');
+ assert.notEqual(children[2].open,true);
+ assert.match(children[2].children[0].textContent,/Other suggestions \(2\)/);
+ assert.match(children[2].children[1].textContent,/may be unrelated/i);
+ assert.equal(children[2].children.filter(c=>c.className==='result-card').length,2);
+ assert.match(children[1].children[0].textContent,/Highest-ranked passage/);
+ children[1].children[2].children[1].onclick();
+ assert.equal(h.els.get('source').open,true);
+ h.run("renderResults(shelf.chunks.map((c,i)=>({...c,score:1-i*.2})), 'lexical')");
+ assert.equal(h.els.get('results').children.length,3);
+ assert.ok(h.els.get('results').children.every(c=>c.className==='result-card'));
+ h.run("renderResults([], 'semantic')");
+ assert.equal(h.els.get('results').children[0].className,'empty');
+});
 test('model error retires worker and index; next request uses fresh worker',async()=>{
  const h=harness();const first=h.run('embed([])');const rejected=assert.rejects(first,/failed/);
  h.run("globalThis.oldWorker=worker; index={vectors:[[1]]}; worker.onmessage({data:{id:serial,error:'load failed'}})");await rejected;

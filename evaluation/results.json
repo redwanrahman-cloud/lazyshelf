@@ -1,0 +1,1855 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-10-23T01:49:53.109Z",
+  "backend": "Node CPU / ONNX. This evaluates the retrieval core, not browser rendering, browser performance, accessibility, or usability.",
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "library_version": "3.8.1",
+  "fixture_sha256": "104aabc86c7a27f020e89b5e3f42ee778f326ab0659bdb37ac55eb36975ebef6",
+  "core_sha256": "cbe84d1da8f63d85c497a102a1f588d7c73814716ef963b890fe1d718937bb5f",
+  "documents": 6,
+  "chunks": 13,
+  "network_attempts": [],
+  "results": [
+    {
+      "mode": "lexical",
+      "id": "p01",
+      "category": "paraphrase",
+      "query": "I misplaced my entry badge. How do I get inside while they make another one?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "The desk can lend a day pass while the new card is prepared."
+        },
+        {
+          "document": "notebook-a",
+          "span": "A member who loses an access card can borrow a day pass while a replacement is prepared."
+        }
+      ],
+      "top1": false,
+      "top3": true,
+      "total_results": 9,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 3.598764849046919,
+          "document": "bookings"
+        },
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 3.085145105331295,
+          "document": "notebook-a"
+        },
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 2.3126620705414638,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p01",
+      "category": "paraphrase",
+      "query": "I misplaced my entry badge. How do I get inside while they make another one?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "The desk can lend a day pass while the new card is prepared."
+        },
+        {
+          "document": "notebook-a",
+          "span": "A member who loses an access card can borrow a day pass while a replacement is prepared."
+        }
+      ],
+      "top1": false,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 0.34944550016173864,
+          "document": "membership"
+        },
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 0.2979973217726833,
+          "document": "notebook-a"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.26091854551633653,
+          "document": "notebook-b"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p02",
+      "category": "paraphrase",
+      "query": "Can I freeze my subscription just for a weekend?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "A member can pause a subscription for at least two full weeks"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 12,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 4.546634297180969,
+          "document": "membership"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 2.4330918612248276,
+          "document": "returns"
+        },
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 1.9026338272781,
+          "document": "notebook-a"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p02",
+      "category": "paraphrase",
+      "query": "Can I freeze my subscription just for a weekend?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "A member can pause a subscription for at least two full weeks"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 0.32097176898877683,
+          "document": "membership"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.2302200065557559,
+          "document": "bookings"
+        },
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 0.18648933153862776,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p03",
+      "category": "paraphrase",
+      "query": "Which lamp must stay disconnected until a new power supply turns up?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "EX-1049: The amber bench lamp"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 11,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 5.524114284091104,
+          "document": "equipment"
+        },
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 3.861739248725873,
+          "document": "membership"
+        },
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 3.3346660811059103,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p03",
+      "category": "paraphrase",
+      "query": "Which lamp must stay disconnected until a new power supply turns up?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "EX-1049: The amber bench lamp"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 0.38496858202953615,
+          "document": "equipment"
+        },
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 0.16141903870756374,
+          "document": "notebook-a"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.15523599123918,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p04",
+      "category": "paraphrase",
+      "query": "When do I bring a borrowed drill back the next day?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Bring the drill and both batteries back by 10:00 the following morning."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 7.2280311039537875,
+          "document": "equipment"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 5.4231730047738145,
+          "document": "membership"
+        },
+        {
+          "id": "f1:1190",
+          "fileId": "f1",
+          "start": 1190,
+          "end": 1407,
+          "text": "supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift notebook. Members leave borrowed tools on the inspection bench rather than putting them straight back into storage.\n",
+          "line": 15,
+          "score": 4.284960759921152,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p04",
+      "category": "paraphrase",
+      "query": "When do I bring a borrowed drill back the next day?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Bring the drill and both batteries back by 10:00 the following morning."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.4391480427433955,
+          "document": "equipment"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.2671252200654253,
+          "document": "returns"
+        },
+        {
+          "id": "f1:1190",
+          "fileId": "f1",
+          "start": 1190,
+          "end": 1407,
+          "text": "supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift notebook. Members leave borrowed tools on the inspection bench rather than putting them straight back into storage.\n",
+          "line": 15,
+          "score": 0.2515369010598594,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p05",
+      "category": "paraphrase",
+      "query": "Where should we put a knotted spool for the printer?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "A tangled filament spool goes in the repair tray"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 4.1642172275905365,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 2.34513129067776,
+          "document": "notebook-b"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 2.279757010296914,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p05",
+      "category": "paraphrase",
+      "query": "Where should we put a knotted spool for the printer?",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "A tangled filament spool goes in the repair tray"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.34976463866533647,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.29133666395394264,
+          "document": "notebook-b"
+        },
+        {
+          "id": "f1:1190",
+          "fileId": "f1",
+          "start": 1190,
+          "end": 1407,
+          "text": "supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift notebook. Members leave borrowed tools on the inspection bench rather than putting them straight back into storage.\n",
+          "line": 15,
+          "score": 0.20052200599260261,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p06",
+      "category": "paraphrase",
+      "query": "I can't make my lesson. Can I reschedule without asking the coordinator?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "may move the booking once if they contact the desk at least twenty-four hours before the class begins."
+        }
+      ],
+      "top1": false,
+      "top3": false,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 2.5928585901518253,
+          "document": "returns"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 2.115096556391403,
+          "document": "membership"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 1.840174538311366,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p06",
+      "category": "paraphrase",
+      "query": "I can't make my lesson. Can I reschedule without asking the coordinator?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "may move the booking once if they contact the desk at least twenty-four hours before the class begins."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 0.41962663883931683,
+          "document": "bookings"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.4110650078222625,
+          "document": "bookings"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 0.28847853995396855,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p07",
+      "category": "paraphrase",
+      "query": "Who has to wait for all the guests to go home?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "A group must nominate one host who stays until every visitor leaves."
+        }
+      ],
+      "top1": false,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 3.6667528217773744,
+          "document": "returns"
+        },
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 3.58091932381906,
+          "document": "bookings"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 1.843744862571165,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p07",
+      "category": "paraphrase",
+      "query": "Who has to wait for all the guests to go home?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "A group must nominate one host who stays until every visitor leaves."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.42146517681534634,
+          "document": "bookings"
+        },
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 0.31967029141907527,
+          "document": "bookings"
+        },
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 0.2305538235558082,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "p08",
+      "category": "paraphrase",
+      "query": "Should we keep the crushed shipping box while the vendor handles the claim?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "keep the packaging until the supplier responds."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 9.179668134158756,
+          "document": "returns"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 2.831436602326461,
+          "document": "membership"
+        },
+        {
+          "id": "f3:1181",
+          "fileId": "f3",
+          "start": 1181,
+          "end": 1508,
+          "text": "s of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt identifiers\nReceipt RC-00731 concerns an unopened soldering iron returned for a manufacturing defect. Receipt RC-00713 concerns an engraved sign collected without a fault report. The receipt numbers refer to different orders.\n",
+          "line": 15,
+          "score": 2.164179825171716,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "p08",
+      "category": "paraphrase",
+      "query": "Should we keep the crushed shipping box while the vendor handles the claim?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "keep the packaging until the supplier responds."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 0.49950744997983915,
+          "document": "returns"
+        },
+        {
+          "id": "f3:1181",
+          "fileId": "f3",
+          "start": 1181,
+          "end": 1508,
+          "text": "s of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt identifiers\nReceipt RC-00731 concerns an unopened soldering iron returned for a manufacturing defect. Receipt RC-00713 concerns an engraved sign collected without a fault report. The receipt numbers refer to different orders.\n",
+          "line": 15,
+          "score": 0.4231585960303528,
+          "document": "returns"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.367178405516568,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "i01",
+      "category": "identifier",
+      "query": "EX-1049",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "EX-1049: The amber bench lamp"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 1,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 2.8918497831373786,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "i01",
+      "category": "identifier",
+      "query": "EX-1049",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "EX-1049: The amber bench lamp"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 0.29739780016248213,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.19171487738919982,
+          "document": "notebook-b"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.18386919614804664,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "i02",
+      "category": "identifier",
+      "query": "RC-00731",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Receipt RC-00731 concerns an unopened soldering iron"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 1,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:1181",
+          "fileId": "f3",
+          "start": 1181,
+          "end": 1508,
+          "text": "s of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt identifiers\nReceipt RC-00731 concerns an unopened soldering iron returned for a manufacturing defect. Receipt RC-00713 concerns an engraved sign collected without a fault report. The receipt numbers refer to different orders.\n",
+          "line": 15,
+          "score": 2.724080242645954,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "i02",
+      "category": "identifier",
+      "query": "RC-00731",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Receipt RC-00731 concerns an unopened soldering iron"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:1181",
+          "fileId": "f3",
+          "start": 1181,
+          "end": 1508,
+          "text": "s of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt identifiers\nReceipt RC-00731 concerns an unopened soldering iron returned for a manufacturing defect. Receipt RC-00713 concerns an engraved sign collected without a fault report. The receipt numbers refer to different orders.\n",
+          "line": 15,
+          "score": 0.2612906460803465,
+          "document": "returns"
+        },
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 0.2171418739840139,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.20252281966377617,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "i03",
+      "category": "identifier",
+      "query": "B-17",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Spare adapters are stored in drawer B-17."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 2,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 2.4264077441137726,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 1.535074287092387,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "i03",
+      "category": "identifier",
+      "query": "B-17",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Spare adapters are stored in drawer B-17."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 0.23684690467494518,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.1969418570236354,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.15323660722939922,
+          "document": "notebook-b"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "i04",
+      "category": "identifier",
+      "query": "MT-4281",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Its inspection ticket is MT-4281."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 1,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 2.0487830396370827,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "i04",
+      "category": "identifier",
+      "query": "MT-4281",
+      "expected": [
+        {
+          "document": "equipment",
+          "span": "Its inspection ticket is MT-4281."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 0.24311281766111922,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 0.1879490055076177,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.14450742440391623,
+          "document": "notebook-b"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "n01",
+      "category": "negation",
+      "query": "Can the desk give cash back for a bank transfer payment?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Desk staff must not issue a cash refund for an item originally paid by bank transfer."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 10.29514507683122,
+          "document": "returns"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 3.767408096006772,
+          "document": "membership"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 3.191598901740063,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "n01",
+      "category": "negation",
+      "query": "Can the desk give cash back for a bank transfer payment?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Desk staff must not issue a cash refund for an item originally paid by bank transfer."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 0.37686343153341484,
+          "document": "returns"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.3017683746171026,
+          "document": "returns"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.26377774065769166,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "n02",
+      "category": "negation",
+      "query": "Can a visitor use power tools before induction?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "Visitors must not operate power tools until they finish the safety induction."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 12,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 9.926262794451883,
+          "document": "membership"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 4.083315459052493,
+          "document": "returns"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 3.070796768629985,
+          "document": "membership"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "n02",
+      "category": "negation",
+      "query": "Can a visitor use power tools before induction?",
+      "expected": [
+        {
+          "document": "membership",
+          "span": "Visitors must not operate power tools until they finish the safety induction."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 0.3470403040888544,
+          "document": "membership"
+        },
+        {
+          "id": "f1:1190",
+          "fileId": "f1",
+          "start": 1190,
+          "end": 1407,
+          "text": "supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift notebook. Members leave borrowed tools on the inspection bench rather than putting them straight back into storage.\n",
+          "line": 15,
+          "score": 0.23528168549963918,
+          "document": "membership"
+        },
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 0.18093475329905379,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "n03",
+      "category": "negation",
+      "query": "Does a change of mind qualify for a refund on engraving?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Custom engraved items are not refundable merely because a customer changes their mind."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 6.314712137674168,
+          "document": "returns"
+        },
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 3.523737584651373,
+          "document": "returns"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 3.3820097866518353,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "n03",
+      "category": "negation",
+      "query": "Does a change of mind qualify for a refund on engraving?",
+      "expected": [
+        {
+          "document": "returns",
+          "span": "Custom engraved items are not refundable merely because a customer changes their mind."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.6244941820618334,
+          "document": "returns"
+        },
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 0.3841100591900605,
+          "document": "returns"
+        },
+        {
+          "id": "f3:1181",
+          "fileId": "f3",
+          "start": 1181,
+          "end": 1508,
+          "text": "s of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt identifiers\nReceipt RC-00731 concerns an unopened soldering iron returned for a manufacturing defect. Receipt RC-00713 concerns an engraved sign collected without a fault report. The receipt numbers refer to different orders.\n",
+          "line": 15,
+          "score": 0.33522687624578446,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "a01",
+      "category": "ambiguous",
+      "query": "Where are the spares now?",
+      "expected": [
+        {
+          "document": "notebook-a",
+          "span": "spare access cards moved to the locked cabinet"
+        },
+        {
+          "document": "notebook-b",
+          "span": "spare extraction filters moved to the tall cabinet"
+        },
+        {
+          "document": "equipment",
+          "span": "Spare adapters are stored in drawer B-17."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 2.32821272686798,
+          "document": "notebook-b"
+        },
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 1.6670384204734618,
+          "document": "equipment"
+        },
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 1.346331118473628,
+          "document": "bookings"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "a01",
+      "category": "ambiguous",
+      "query": "Where are the spares now?",
+      "expected": [
+        {
+          "document": "notebook-a",
+          "span": "spare access cards moved to the locked cabinet"
+        },
+        {
+          "document": "notebook-b",
+          "span": "spare extraction filters moved to the tall cabinet"
+        },
+        {
+          "document": "equipment",
+          "span": "Spare adapters are stored in drawer B-17."
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 0.4447837158009201,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.33168564417374036,
+          "document": "equipment"
+        },
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 0.23690611587121327,
+          "document": "notebook-a"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "a02",
+      "category": "ambiguous",
+      "query": "What happens when someone cancels?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "A class cancelled by the workshop receives a full booking-credit refund."
+        },
+        {
+          "document": "membership",
+          "span": "A member can pause a subscription"
+        }
+      ],
+      "top1": false,
+      "top3": false,
+      "total_results": 3,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 1.8001845787500568,
+          "document": "membership"
+        },
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 1.2609946784802082,
+          "document": "bookings"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 1.2505732348564047,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "a02",
+      "category": "ambiguous",
+      "query": "What happens when someone cancels?",
+      "expected": [
+        {
+          "document": "bookings",
+          "span": "A class cancelled by the workshop receives a full booking-credit refund."
+        },
+        {
+          "document": "membership",
+          "span": "A member can pause a subscription"
+        }
+      ],
+      "top1": true,
+      "top3": true,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f4:598",
+          "fileId": "f4",
+          "start": 598,
+          "end": 1198,
+          "text": "isor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA group must nominate one host who stays until every visitor leaves. The host checks that borrowed chairs are returned and writes missing equipment in the shift notebook. The real process might store a contact number, but this fixture deliberately contains no contact details.\n\n## Cancellations\nA class cancelled by the workshop receives a full booking-credit refund. A member who simply fails to attend does not receive an automatic refund. The coordinator may review exceptional cases individually.\n",
+          "line": 9,
+          "score": 0.41048588617696247,
+          "document": "bookings"
+        },
+        {
+          "id": "f1:599",
+          "fileId": "f1",
+          "start": 599,
+          "end": 1290,
+          "text": "ng card immediately and issues a replacement after checking the membership number. Replacement cards cost 12 credits. A card found later must be returned; it must not be reactivated. The desk can lend a day pass while the new card is prepared.\n\n## Membership pauses\nA member can pause a subscription for at least two full weeks by telling the desk before the next billing date. The pause begins on the next billing date, not on the day the member asks. The desk does not backdate pauses. Members who need a shorter break can keep their normal membership active.\n\n## Closing routine\nThe last supervisor checks the soldering irons, shuts the windows and records unfinished repairs in the shift",
+          "line": 9,
+          "score": 0.2887979032681925,
+          "document": "membership"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.2600797070987996,
+          "document": "returns"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "z01",
+      "category": "absent",
+      "query": "ZEBRA_ABSENT_LITERAL_83Q",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 0,
+      "source_exact": true,
+      "top3_rows": []
+    },
+    {
+      "mode": "semantic",
+      "id": "z01",
+      "category": "absent",
+      "query": "ZEBRA_ABSENT_LITERAL_83Q",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f5:0",
+          "fileId": "f5",
+          "start": 0,
+          "end": 588,
+          "text": "Shift notebook, front desk\r\n\r\nThis fictional note uses CRLF and an emoji: 🧰. Do not normalize its source coordinates before checking excerpts.\r\n\r\nTuesday: The spare access cards moved to the locked cabinet beside the membership desk. The keys remain with the supervisor.\r\n\r\nA member who loses an access card can borrow a day pass while a replacement is prepared. A found missing card must not be reactivated.\r\n\r\nLiteral markup for safe rendering: <img src=x onerror=window.__fixtureXss=true> and <script>window.__fixtureXss=true</script>. These strings must remain text, never execute.\r\n",
+          "line": 1,
+          "score": 0.23592839370385196,
+          "document": "notebook-a"
+        },
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 0.17514368476593134,
+          "document": "equipment"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.16323399670923644,
+          "document": "notebook-b"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "z02",
+      "category": "absent",
+      "query": "What is the Wi-Fi password for the workshop?",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 1.4298361371376496,
+          "document": "equipment"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 1.3692763374580332,
+          "document": "returns"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 1.2555430851022469,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "z02",
+      "category": "absent",
+      "query": "What is the Wi-Fi password for the workshop?",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f1:0",
+          "fileId": "f1",
+          "start": 0,
+          "end": 699,
+          "text": "# Maker Hall membership handbook\n\nThis handbook is an original fictional fixture for software testing. Maker Hall is not a real customer. The membership desk keeps a paper backup of essential notices.\n\n## Visitors and induction\nA first-time visitor may tour the workshop with a host. Visitors must not operate power tools until they finish the safety induction. Booking a tour does not count as completing induction. An inducted member may use the hand-tool benches without an appointment when a supervisor is present.\n\n## Access cards\nWhen a member loses an access card, the desk disables the missing card immediately and issues a replacement after checking the membership number. Replacement cards",
+          "line": 1,
+          "score": 0.37568257875664496,
+          "document": "membership"
+        },
+        {
+          "id": "f4:0",
+          "fileId": "f4",
+          "start": 0,
+          "end": 698,
+          "text": "# Room bookings\n\nThese are original fictional room-booking instructions created only for evaluation. The workshop has a quiet classroom and a noisy fabrication room.\n\n## Moving a booking\nA member who cannot attend a booked class may move the booking once if they contact the desk at least twenty-four hours before the class begins. Moving a booking later than that requires the coordinator's approval. A member may transfer a place to another inducted member instead.\n\n## Quiet room\nThe quiet classroom closes at 19:30 on Fridays. The fabrication room remains open until 21:00 when a trained supervisor is present. Friday opening times are different from weekday opening times.\n\n## Group sessions\nA",
+          "line": 1,
+          "score": 0.28486836072459293,
+          "document": "bookings"
+        },
+        {
+          "id": "f6:0",
+          "fileId": "f6",
+          "start": 0,
+          "end": 605,
+          "text": "Shift notebook, fabrication room\n\nThis is a second fictional document with the same filename as the front-desk notebook. Search results must not merge their identities.\n\nThursday: The spare extraction filters moved to the tall cabinet beside the fabrication-room door. The blue toolbox now contains only hand tools.\n\nThe 3D printer's test piece is a small orange bracket. The instructor keeps it on the demonstration table as an example of over-extrusion.\n\nCanary for bounded network inspection: LAZYSHELF_SYNTHETIC_CANARY_6R2K9. This is deliberately a synthetic public-test-like value, not a credential.\n",
+          "line": 1,
+          "score": 0.26798516863802485,
+          "document": "notebook-b"
+        }
+      ]
+    },
+    {
+      "mode": "lexical",
+      "id": "z03",
+      "category": "absent",
+      "query": "Which supplier sells the cheapest replacement adapter?",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 4.370053778881591,
+          "document": "returns"
+        },
+        {
+          "id": "f3:594",
+          "fileId": "f3",
+          "start": 594,
+          "end": 1281,
+          "text": "nd route for a manufacturing defect. Staff should read the fault report before deciding which policy applies.\n\n## Refund handling\nA refund goes back to the original payment method. Desk staff must not issue a cash refund for an item originally paid by bank transfer. If the original method is unavailable, refer the case to the coordinator rather than selecting an alternative without approval.\n\n## Packaging and transit\nIf a parcel arrives with a crushed outer box, keep the packaging until the supplier responds. The transport claim needs the delivery date, order number and photographs of the damage. A damaged box by itself is not evidence that the tool inside is faulty.\n\n## Receipt",
+          "line": 9,
+          "score": 3.204979236005032,
+          "document": "returns"
+        },
+        {
+          "id": "f2:0",
+          "fileId": "f2",
+          "start": 0,
+          "end": 697,
+          "text": "Equipment maintenance register\n\nThis is an invented register for a fictional shared workshop, not manufacturer advice.\n\nEX-1049: The amber bench lamp flickers after ten minutes. Keep this lamp unplugged until the replacement adapter arrives. Inspection is scheduled for Wednesday morning. The lamp's repair ticket is MT-4821.\n\nEX-1094: The blue bench lamp passed its electrical inspection on Monday. This lamp is available for normal use. Its inspection ticket is MT-4281. Do not confuse EX-1094 with EX-1049.\n\nThe laser cutter's extraction fan must run whenever the cutter is active. If smoke remains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is",
+          "line": 1,
+          "score": 2.9759795129902358,
+          "document": "equipment"
+        }
+      ]
+    },
+    {
+      "mode": "semantic",
+      "id": "z03",
+      "category": "absent",
+      "query": "Which supplier sells the cheapest replacement adapter?",
+      "expected": [],
+      "top1": null,
+      "top3": null,
+      "total_results": 13,
+      "source_exact": true,
+      "top3_rows": [
+        {
+          "id": "f2:1196",
+          "fileId": "f2",
+          "start": 1196,
+          "end": 1384,
+          "text": "from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals, not adapters. The two labels are deliberately similar for identifier-sensitive search.\n",
+          "line": 13,
+          "score": 0.39229191690230014,
+          "document": "equipment"
+        },
+        {
+          "id": "f2:597",
+          "fileId": "f2",
+          "start": 597,
+          "end": 1296,
+          "text": "ains inside the enclosure after a job, stop the machine and call the supervisor. Cleaning the lid is not a substitute for checking the extraction filter.\n\nTo borrow a cordless drill overnight, sign the tool-out sheet before closing. Bring the drill and both batteries back by 10:00 the following morning. The charger stays at the workshop and is not included in an overnight loan.\n\nThe 3D printer uses blue PLA for public demonstrations. A tangled filament spool goes in the repair tray; do not throw it in ordinary waste. The weekly maintenance routine includes checking the nozzle and wiping dust from the enclosure.\n\nSpare adapters are stored in drawer B-17. Drawer B-71 contains printed manuals,",
+          "line": 9,
+          "score": 0.2496106320248531,
+          "document": "equipment"
+        },
+        {
+          "id": "f3:0",
+          "fileId": "f3",
+          "start": 0,
+          "end": 694,
+          "text": "# Supplier returns and refunds\n\nThis is an invented policy for a fictional workshop shop. All amounts use fictional credits. It is not legal or financial advice.\n\n## Faulty products\nA customer who receives a faulty unopened tool can ask for a replacement or a refund within thirty days of collection. Record the receipt number and the reported fault. A photograph is useful but is not mandatory when the customer can bring the item to the desk.\n\n## Custom orders\nCustom engraved items are not refundable merely because a customer changes their mind. This does not remove the replacement or refund route for a manufacturing defect. Staff should read the fault report before deciding which policy",
+          "line": 1,
+          "score": 0.21705220534879682,
+          "document": "returns"
+        }
+      ]
+    }
+  ],
+  "model_load_ms": 207.1245,
+  "encode_ms": 270.8803,
+  "dimensions": 384,
+  "summary": {
+    "all_source_exact": true,
+    "network_calls": 0,
+    "ranking": {
+      "lexical": {
+        "answerable": 17,
+        "top1": 13,
+        "top3": 15
+      },
+      "semantic": {
+        "answerable": 17,
+        "top1": 16,
+        "top3": 17
+      }
+    }
+  },
+  "finished_at": "2026-10-23T01:49:53.841Z"
+}

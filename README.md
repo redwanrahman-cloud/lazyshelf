@@ -2,7 +2,7 @@
 
 A small, local passage finder for English text and Markdown. Search by words or by meaning, then inspect the exact original source. Semantic similarity is not proof of an answer.
 
-## Local development
+## Try it locally
 
 Requires Node.js 22 or newer and a modern browser with WebAssembly. No API key or GPU is required.
 
@@ -28,23 +28,35 @@ node scripts/prepare-assets.mjs /path/to/existing/cache-root
 
 The cache root must contain `node_modules/@huggingface/transformers`, `node_modules/onnxruntime-web` and `model-cache/Xenova/all-MiniLM-L6-v2`. The preparation script copies public assets locally and records their hashes; it does not download anything. It is a development provenance utility; use the hash-pinned downloader for normal installation.
 
-## Scope
+## A short tour
 
-- UTF-8 `.txt` and `.md` only; 30 files, 500 KB per file, 500,000 total characters, at most 900 passages.
+1. Load the built-in fictional sample collection, or choose your own English TXT/MD files.
+2. Choose **Words** for keyword matching, including identifiers. This matches tokens, not a strict quoted phrase.
+3. Prepare the model and choose **Meaning** to retrieve related passages when you cannot remember the original wording.
+4. Open a result to inspect its exact source and line context. Files with the same name retain separate identities.
+
+Meaning search shows the highest-ranked passage first, explicitly as a suggestion rather than a verified answer. Other suggestions stay collapsed until requested and may be unrelated. A plausible-looking result is not evidence that your question has an answer in the collection.
+
+## Scope and limitations
+
+- UTF-8 `.txt` and `.md` only; 30 files, 512,000 bytes per file, 500,000 total UTF-16 code units, at most 900 passages.
 - Files remain in page memory. Clearing or reloading removes the collection; this is not a backup system.
 - No generated answers, file edits, PDF parsing or account connections.
 - Inspect source context for negation, codes and ambiguous language. Rankings can be wrong.
-- Model assets are served locally. Offline reload and the final deployable package require separate verification; no universal offline claim is made.
+- Model assets are served locally. This is not an offline-installable PWA; keep the local server running. No universal offline-reload guarantee is made.
+- Initial semantic indexing takes longer than subsequent searches and depends on collection size and device performance. Keyword search does not require the model.
 
 ## Technical structure
 
 `dist/core.mjs` implements strict decoding, bounded collections, exact-offset chunks and lexical/semantic ranking. `dist/embedding-worker.mjs` runs CPU WASM inference outside the UI thread. `dist/app.mjs` manages collection revisions, cancellation and source inspection. Text is rendered as text nodes, never executable Markdown/HTML.
 
-This project uses Transformers.js and the Apache-2.0 MiniLM model. See `THIRD_PARTY_NOTICES.md` and `licenses/` for exact versions, model revision and bundled notices. Existing tools including SemanticFinder already provide browser-local semantic search; LazyShelf makes no claim to invent that approach.
+This project uses Transformers.js and the Apache-2.0 MiniLM model. See [third-party notices](THIRD_PARTY_NOTICES.md) and [licenses](licenses/) for exact versions, model revision and bundled notices. Existing tools including SemanticFinder already provide browser-local semantic search; LazyShelf makes no claim to invent that approach. Its focus is a small multi-file reading workflow with traceable source context and keyword search available before model preparation.
 
 ## Reproducible evaluation and source package
 
-`evaluation/README.md` documents the synthetic, non-blind retrieval fixture, measured results and limitations. These results are not a user study or a head-to-head accuracy comparison with SemanticFinder.
+[The reproducible evaluation](evaluation/README.md) documents six fictional documents and twenty authored queries. On the seventeen answerable queries, keyword retrieval found the expected passage first in 13 cases, versus 16 for semantic retrieval; top-three counts were 15 and 17 respectively. The semantic miss and absent-answer queries remain in the [actual results](evaluation/results.json).
+
+These are synthetic, non-blind Node CPU results, not a user study, browser certification or a head-to-head accuracy comparison with SemanticFinder. Source-slice checks verify where text came from, not whether its interpretation is correct.
 
 ```sh
 node scripts/package-source.mjs --check
@@ -52,3 +64,7 @@ node scripts/package-source.mjs /path/to/new-source-package
 ```
 
 The packaging command requires a new destination, includes licensing and evaluation files, and creates a file-by-file SHA-256 manifest. Downloaded model/runtime assets and imported user documents are not part of the source package. Prepare the pinned assets separately with the setup commands above.
+
+## Attribution
+
+Released under the [MIT license](LICENSE). Development, documentation and review used substantial AI assistance from Codex and Hermes under the project owner's direction. Test results describe executed checks, not guarantees of correctness or accessibility certification.

@@ -58,6 +58,17 @@ This project uses Transformers.js and the Apache-2.0 MiniLM model. See [third-pa
 
 These are synthetic, non-blind Node CPU results, not a user study, browser certification or a head-to-head accuracy comparison with SemanticFinder. Source-slice checks verify where text came from, not whether its interpretation is correct.
 
+To reproduce the evaluation from the repository root:
+
+```sh
+node scripts/download-assets.mjs
+node scripts/verify-assets.mjs
+npm install --ignore-scripts
+node evaluation/run-evaluation.mjs
+```
+
+The Node evaluation requires the npm dependencies; serving the static application and running the core tests do not. Asset setup and dependency installation require internet access, while the evaluation disables network fetches during inference.
+
 ```sh
 node scripts/package-source.mjs --check
 node scripts/package-source.mjs /path/to/new-source-package

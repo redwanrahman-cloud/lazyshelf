@@ -1,0 +1,116 @@
+{
+  "source_commit": "69fb601a8cda9a70a5e371a75bce5cf0b187e8bb",
+  "files": [
+    {
+      "file": "LICENSE",
+      "bytes": 1070,
+      "sha256": "3be825eec8500e1cfdca0d956a5ae8d7d3c21768164d91ca982c0b36c2e58c70"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2576,
+      "sha256": "07e098443a9999860a84215bbe5b773e460b2e15891a46f78ba9ae30cf09ef33"
+    },
+    {
+      "file": "app.mjs",
+      "bytes": 8969,
+      "sha256": "41c44d1d70a3934c91d594bd63727c2ee61891acd1ac7d83d90f4d0ca5a2db6e"
+    },
+    {
+      "file": "asset-paths.mjs",
+      "bytes": 244,
+      "sha256": "53f81a4fa5bd8433573b7567b03ded9aba98f5e658be8b4ec1f4c41dd5a0f820"
+    },
+    {
+      "file": "core.mjs",
+      "bytes": 3423,
+      "sha256": "cbe84d1da8f63d85c497a102a1f588d7c73814716ef963b890fe1d718937bb5f"
+    },
+    {
+      "file": "embedding-worker.mjs",
+      "bytes": 774,
+      "sha256": "41d1367a9c53fe015b3110dcd1ffb01e2a5fe37ce82fac459f0b450f0fa35b2f"
+    },
+    {
+      "file": "favicon.svg",
+      "bytes": 236,
+      "sha256": "350b38ba2699d0a8ed399e54314091fb63b4ed3e3a7ccaaf09e895c5b15d74bd"
+    },
+    {
+      "file": "future.css",
+      "bytes": 15333,
+      "sha256": "e4f468d65bb30b86acaf8c18e736ea6aab0410e1907b173d8e094f22032ce338"
+    },
+    {
+      "file": "index.html",
+      "bytes": 5392,
+      "sha256": "0d0f492ff68d20371a74ba12c853ab32b98a4f1a05c422ac04546bfd8637deb7"
+    },
+    {
+      "file": "readability.css",
+      "bytes": 1323,
+      "sha256": "22c49159803bce0013ce0e374482e695fafc8cd0a313405c371104150f4eb214"
+    },
+    {
+      "file": "styles.css",
+      "bytes": 9135,
+      "sha256": "fb5285557ddefd97985c89cf72a7a31b7dfe981e4040f78b562011e56b00132b"
+    },
+    {
+      "file": "licenses/ONNX-RUNTIME-MIT.txt",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "file": "licenses/ONNX-ThirdPartyNotices.txt",
+      "bytes": 326866,
+      "sha256": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc"
+    },
+    {
+      "file": "licenses/TRANSFORMERS-APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "licenses/XENOVA-MINILM-MODEL-CARD.txt",
+      "bytes": 1767,
+      "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+    },
+    {
+      "file": "assets/runtime/transformers.js",
+      "bytes": 2253735,
+      "sha256": "ca697cc102b304de065fbbbd7f3714084d18531509741066ea0bb0326a8ac815"
+    },
+    {
+      "file": "assets/runtime/ort-wasm-simd-threaded.jsep.mjs",
+      "bytes": 44484,
+      "sha256": "08fb86ec433c78bfb032c5d84a68b8e8e5a8d81268fa39e24314179a5767a5b9"
+    },
+    {
+      "file": "assets/runtime/ort-wasm-simd-threaded.jsep.wasm",
+      "bytes": 21596019,
+      "sha256": "c46655e8a94afc45338d4cb2b840475f88e5012d524509916e505079c00bfa39"
+    },
+    {
+      "file": "assets/model/Xenova/all-MiniLM-L6-v2/config.json",
+      "bytes": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+    },
+    {
+      "file": "assets/model/Xenova/all-MiniLM-L6-v2/tokenizer.json",
+      "bytes": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+    },
+    {
+      "file": "assets/model/Xenova/all-MiniLM-L6-v2/tokenizer_config.json",
+      "bytes": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+    },
+    {
+      "file": "assets/model/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx",
+      "bytes": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+    }
+  ],
+  "browser_render_verified": false
+}

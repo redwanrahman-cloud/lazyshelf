@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e1c">
+  <title>LazyShelf — Find the passage you remember</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="future.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to search</a>
+  <header class="masthead">
+    <a class="brand" href="./" aria-label="LazyShelf home"><span class="brand-mark" aria-hidden="true">▤</span> LazyShelf<span class="brand-dot" aria-hidden="true">.</span></a>
+    <span class="masthead-note">Less digging. More discovery.</span>
+    <span class="edition">LOCAL-FIRST WORKSPACE</span>
+  </header>
+
+  <main class="desk">
+    <aside class="collection" aria-labelledby="collection-title">
+      <a class="jump-search" href="#workspace">Jump to search ↓</a>
+      <div class="section-heading"><span class="eyebrow"><span aria-hidden="true">📚</span> YOUR COLLECTION</span><span class="collection-count" id="count">0</span></div>
+      <h2 id="collection-title">Your ideas.<br>Within reach.</h2>
+      <p class="muted">Notes, drafts, saved thoughts. Give them a place to be found.</p>
+      <div class="file-area">
+        <span class="paper-icon" aria-hidden="true">↥</span>
+        <label for="files">Add your documents</label>
+        <p>English .txt and .md files</p>
+        <input id="files" type="file" accept=".txt,.md,text/plain,text/markdown" multiple aria-describedby="file-help">
+      </div>
+      <p id="file-help" class="fine-print">Choose files from your device. PDFs and images aren't supported.</p>
+      <button id="demo" class="button button-secondary" type="button"><span class="ui-icon" aria-hidden="true">🎲</span> Try a fictional collection <span aria-hidden="true">↗</span></button>
+      <div class="library-heading"><h3>On your shelf</h3><button id="clear" class="text-button" type="button">Clear shelf</button></div>
+      <details class="shelf-details"><summary>View or remove files</summary><div id="library" class="library"><p class="empty-library">Your documents will appear here.</p></div></details>
+      <div class="collection-note"><span aria-hidden="true">⌁</span><p>Your documents stay in this browser. Meaning search uses a separately downloaded local model.</p></div>
+    </aside>
+
+    <section id="workspace" class="workspace" aria-labelledby="workspace-title" tabindex="-1">
+      <div class="intro"><span class="eyebrow"><span aria-hidden="true">✦</span> FOLLOW THE THOUGHT</span><h1 id="workspace-title">Somewhere in your notes.<br><em>Right here in a moment.</em></h1><p>Search a word. Follow an idea. Rediscover the passage.<br class="desktop-break"> Original text, always one click away.</p></div>
+      <form id="search-form" class="search-panel" role="search">
+        <label class="search-label" for="query"><span aria-hidden="true">⌕</span> What are you looking for?</label>
+        <div class="query-row"><input id="query" type="search" placeholder="A phrase, a detail, a half-remembered idea…" autocomplete="off" required><button class="button button-primary" type="submit">Find passages <span class="arrow-icon" aria-hidden="true">→</span></button></div>
+        <div class="search-options"><div class="mode-field"><label for="mode">Search by</label><select id="mode"><option value="lexical">Words · lexical</option><option value="semantic">Meaning · semantic</option></select></div><span class="search-note">Related passages. Not generated answers.</span></div>
+      </form>
+      <div class="model-panel" aria-labelledby="model-title"><div><h2 id="model-title"><span aria-hidden="true">🧠</span> Same idea. Different words.</h2><p>Enable meaning search on your device. Words mode is ready without it.</p></div><div class="model-actions"><button id="model" class="button button-secondary" type="button"><span aria-hidden="true">✧</span> Load semantic model</button><button id="cancel" class="text-button" type="button">Cancel</button></div></div>
+      <progress id="progress" aria-label="Model loading progress" hidden></progress>
+      <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Start with your own documents or try the fictional collection.</p>
+      <div class="results-heading"><h2><span aria-hidden="true">🔎</span> Your passages</h2><span class="eyebrow">ORIGINAL WORDS. REAL CONTEXT.</span></div>
+      <div id="results" class="results"><div class="empty-state"><div class="empty-illustration" aria-hidden="true"><span></span><span></span><span></span></div><h3>Your next “there it is” moment.</h3><p>Add your notes or try the fictional collection.<br>Then let a word—or an idea—lead you back.</p></div></div>
+      <footer class="workspace-footer"><span>Built for the things you've already written.</span><span>Check the source. Keep your judgment.</span></footer>
+    </section>
+  </main>
+  <dialog id="source" aria-labelledby="source-title"><div class="source-header"><div><span class="eyebrow">ORIGINAL DOCUMENT</span><h2 id="source-title">Source</h2></div><button id="source-close" class="button button-secondary" type="button">Close <span aria-hidden="true">×</span></button></div><pre id="source-text"></pre></dialog>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
